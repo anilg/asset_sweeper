@@ -3,7 +3,7 @@ module Sweeper
     base.extend ClassMethods
   end  
   
-  module ClassMethods
+  module ClassMethods    
   end
 end
 
