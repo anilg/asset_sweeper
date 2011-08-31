@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = "2011-08-31"
   s.description = "Cleans up application by removing unused images."
   s.email = "galve.anil@gmail.com"
-  s.extra_rdoc_files = ["CHANGELOG", "README", "README.rdoc", "lib/sweeper.rb"]
-  s.files = ["CHANGELOG", "README", "README.rdoc", "Rakefile", "lib/sweeper.rb", "sweeper.gemspec", "Manifest"]
+  s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/sweeper.rb", "lib/tasks/sweeper.rake"]
+  s.files = ["CHANGELOG", "README.rdoc", "Rakefile", "init.rb", "lib/sweeper.rb", "lib/tasks/sweeper.rake", "nbproject/project.properties", "nbproject/project.xml", "sweeper.gemspec", "Manifest"]
   s.homepage = "http://github.com/anilg/sweeper"
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Sweeper", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
