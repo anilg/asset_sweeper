@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.date = "2011-08-31"
   s.description = "Cleans up application by removing unused images."
   s.email = "galve.anil@gmail.com"
-  s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/asset_sweeper.rb", "lib/tasks/asset_sweeper.rake"]
-  s.files = ["CHANGELOG", "README.rdoc", "Rakefile", "init.rb", "lib/asset_sweeper.rb", "lib/tasks/asset_sweeper.rake", "nbproject/project.properties", "nbproject/project.xml", "asset_sweeper.gemspec", "Manifest"]
+  s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/asset_sweeper.rb", "tasks/asset_sweeper.rake"]
+  s.files = ["CHANGELOG", "README.rdoc", "Rakefile", "asset_sweeper.gemspec", "init.rb", "lib/asset_sweeper.rb", "nbproject/private/private.xml", "nbproject/project.properties", "nbproject/project.xml", "tasks/asset_sweeper.rake", "Manifest"]
   s.homepage = "http://github.com/anilg/asset_sweeper"
-  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Sweeper", "--main", "README.rdoc"]
+  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Asset_sweeper", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "asset_sweeper"
   s.rubygems_version = "1.8.10"
