@@ -1,4 +1,4 @@
-module Sweeper
+module AssetSweeper
   def self.included(base)
     base.extend ClassMethods
   end  
@@ -8,7 +8,7 @@ module Sweeper
 end
 
 class ActiveRecord::Base
-  include Sweeper
+  include AssetSweeper
 end
 
 

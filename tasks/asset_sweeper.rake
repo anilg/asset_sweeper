@@ -1,6 +1,6 @@
 # Author Anil
 # Task to remove unwanted images
-namespace :sweeper do
+namespace :asset_sweeper do
   task :sweep => :environment do
     require "fileutils"
     img=Dir.glob("**/*.jpg")+Dir.glob("**/*.png")+Dir.glob("**/*.gif")

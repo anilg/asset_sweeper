@@ -1,1 +1,1 @@
-require 'sweeper'
+require 'asset_sweeper'

@@ -4,16 +4,13 @@ Rails gem is for cleaning up rails application by removing unused assets from ap
 
 == Install
 
-  gem install sweeper --source http://gems.github.com
+  gem install asset_sweeper --source http://gems.github.com
 
 
 == Usage
 
-Switch to console by
-ruby script/console
-
-Run command
-Sweeper.sweep
+Run rake task
+rake asset_sweeper:sweep -t
 
 
 == License
