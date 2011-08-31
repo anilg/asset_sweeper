@@ -1,4 +1,4 @@
-= Sweeper
+= Asset Sweeper
 
 Rails gem is for cleaning up rails application by removing unused assets from application.
 
