@@ -12,9 +12,9 @@ namespace :sweeper do
     end
     img.each do |m|
       if not content=~ Regexp.new("\\b"+File.basename(m)+"\\b")
-        FileUtils.mkdir_p "../unused/"+File.dirname(m)
-        FileUtils.mv m,"../unused/"+m
-        puts "Image "+m+" moved to ../unused/"+File.dirname(m)+" folder"
+        FileUtils.mkdir_p "unused/"+File.dirname(m)
+        FileUtils.cp m,"unused/"+m
+        puts "Image "+m+" moved to unused/"+File.dirname(m)+" folder"
       end
     end
   end
