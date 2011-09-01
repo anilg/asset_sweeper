@@ -13,6 +13,11 @@ Run rake task
 
 rake asset_sweeper:sweep -t
 
+This rake task scans for all images (.jpg, .png, .gif) in application (html, css, js files)
+and create a folder named unused in applications root directory and list all images which are not used in application.
+But if image name is constructed dynamically in code this script will list such images also
+and images in assets/attachments like folder will be listed so you need to verify images in that folder before deleting.
+
 
 == License
 
