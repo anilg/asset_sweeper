@@ -1,6 +1,6 @@
 = Asset Sweeper
 
-Rails gem is for cleaning up rails application by removing unused assets from application.
+This plugin is for cleaning up rails application by removing unused images from application.
 
 == Install
 
