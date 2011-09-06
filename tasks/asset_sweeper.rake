@@ -1,5 +1,5 @@
 # Author Anil
-# Task to remove unwanted images
+# Task to remove unused images
 namespace :asset_sweeper do
   task :sweep => :environment do
     require "fileutils"
