@@ -3,7 +3,7 @@
 namespace :asset_sweeper do
   task :sweep => :environment do
     require "fileutils"
-    img=Dir.glob("**/*.jpg")+Dir.glob("**/*.png")+Dir.glob("**/*.gif")
+    img=Dir.glob("**/public/images/**/*.jpg")+Dir.glob("**/public/images/**/*.png")+Dir.glob("**/public/images/**/*.gif")
     data=Dir.glob("**/*.htm*")+Dir.glob("**/*.css")+Dir.glob("**/*.js")
     puts img.length.to_s+" images found & "+data.length.to_s+" files found to search against"
     content=""
@@ -13,7 +13,7 @@ namespace :asset_sweeper do
     img.each do |m|
       if not content=~ Regexp.new("\\b"+File.basename(m)+"\\b")
         FileUtils.mkdir_p "unused/"+File.dirname(m)
-        FileUtils.cp m,"unused/"+m
+        FileUtils.mv m,"unused/"+m
         puts "Image "+m+" moved to unused/"+File.dirname(m)+" folder"
       end
     end
