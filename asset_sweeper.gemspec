@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anil Galve"]
-  s.date = "2011-08-31"
+  s.date = "2011-09-14"
   s.description = "Cleans up application by removing unused images."
   s.email = "galve.anil@gmail.com"
   s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/asset_sweeper.rb", "tasks/asset_sweeper.rake"]
