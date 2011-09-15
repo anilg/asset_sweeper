@@ -1,8 +1,12 @@
 = Asset Sweeper
 
-This plugin is for cleaning up rails application by removing unused images from application.
+This gem is for cleaning up rails application by removing unused images from application.
 
 == Install
+
+  ruby script/gem install asset_sweeper
+
+  It's also available in plugin form. You can install a plugin by following command.
 
   ruby script/plugin install git@github.com:anilg/asset_sweeper.git
 
@@ -13,10 +17,9 @@ Run rake task
 
 rake asset_sweeper:sweep -t
 
-This rake task scans for all images (.jpg, .png, .gif) in application (html, css, js files)
-and create a folder named unused in applications root directory and list all images which are not used in application.
-But if image name is constructed dynamically in code this script will list such images also
-and images in assets/attachments like folder will be listed so you need to verify images in that folder before deleting.
+This rake task scans for all images (in "public/images" folder) (.jpg, .png, .gif) in application (html, css, js files)
+and create a folder named unused in applications root directory and move images which are not used in application.
+But if image name is constructed dynamically in code this script will list such images.
 
 
 == License
