@@ -1,6 +1,7 @@
 = Asset Sweeper
 
-This gem is for cleaning up rails application by removing unused images from application.
+This gem is for cleaning up rails application by removing unused images from application
+also with help of this you can list down missing images called from stylesheets which causes page loading slower.
 
 == Install
 
@@ -17,10 +18,15 @@ Run rake task
 
 rake asset_sweeper:sweep -t
 
-This rake task scans for all images (in "public/images" folder) (.jpg, .png, .gif) in application (html, css, js files)
+This rake task scans for all images (in "public/images" folder) (.jpg, .png, .gif) in application (rb, html, css, js files)
 and create a folder named unused in applications root directory and move images which are not used in application.
 But if image name is constructed dynamically in code this script will list such images.
 
+rake asset_sweeper:find_missing_images -t
+
+This rake task will scan through all stylesheets present in application and
+verifies whether called images are present in application and list down all images path
+which are not present in application.
 
 == License
 
