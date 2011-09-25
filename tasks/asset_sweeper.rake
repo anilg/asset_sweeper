@@ -1,7 +1,7 @@
 # Author Anil
 # Task to remove unused images
 namespace :asset_sweeper do
-  task :sweep => :environment do
+  task :remove_unused_images => :environment do
     require "fileutils"
     img=Dir.glob("**/public/images/**/*.jpg")+Dir.glob("**/public/images/**/*.png")+Dir.glob("**/public/images/**/*.gif")
     data=Dir.glob("**/*.htm*")+Dir.glob("**/*.css")+Dir.glob("**/*.js")+Dir.glob("**/*.rb")
@@ -19,7 +19,41 @@ namespace :asset_sweeper do
     end
   end
 
-    task :find_missing_images => :environment do
+  task :list_unused_stylesheets => :environment do
+    stylesheets = Dir.glob("**/*.css")
+    data=Dir.glob("**/*.htm*")
+    content=""
+    data.each do |f|
+      content+=File.open(f, 'r').read
+    end
+    p"=========================================================="
+    p'Following stylesheets are not called from any view in application. Hence look like unused ones. Please verity and delete if they are not being used actually.'
+    stylesheets.each do |s|
+      if not content=~ Regexp.new("\\b"+File.basename(s)+"\\b")
+        p"#{s}"
+      end
+    end
+    p"=========================================================="
+  end
+
+  task :list_unused_javascripts => :environment do
+    javascripts = Dir.glob("**/*.js")
+    data=Dir.glob("**/*.htm*")
+    content=""
+    data.each do |f|
+      content+=File.open(f, 'r').read
+    end
+    p"=========================================================="
+    p'Following javascripts are not called from any view in application. Hence look like unused ones. Please verity and delete if they are not being used actually.'
+    javascripts.each do |j|
+      if not content=~ Regexp.new("\\b"+File.basename(j)+"\\b")
+        p"#{j}"
+      end
+    end
+    p"=========================================================="
+  end
+
+  task :find_missing_images => :environment do
     image_paths = []
     data = Dir.glob("**/*.css")
     content=""
