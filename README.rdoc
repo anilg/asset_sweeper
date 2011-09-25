@@ -1,6 +1,6 @@
 = Asset Sweeper
 
-This gem is for cleaning up rails application by removing unused images from application
+This gem is for cleaning up rails application by removing unused images, listing unused stylesheets and javascripts from application
 also with help of this you can list down missing images called from stylesheets which causes page loading slower.
 
 == Install
@@ -16,11 +16,34 @@ also with help of this you can list down missing images called from stylesheets 
 
 Run rake task
 
-rake asset_sweeper:sweep -t
+rake asset_sweeper:remove_unused_images -t
 
 This rake task scans for all images (in "public/images" folder) (.jpg, .png, .gif) in application (rb, html, css, js files)
 and create a folder named unused in applications root directory and move images which are not used in application.
+
 But if image name is constructed dynamically in code this script will list such images.
+
+
+rake asset_sweeper:list_unused_stylesheets -t
+
+This rake task scans for all stylesheet names present in "public/stylesheets/*" folder in application (html files i.e. views)
+and list down as ununsed if it doesnt get any stylesheet being included in any of views in application.
+
+But this rake task also lists all third party stylesheets as unused as it doesnt get
+their names in views. Also if stylesheets names are being constructed programatically
+even those stylesheets will be listed as ununsed ones. So before actually deleting
+stylesheets you have verify manually whether that is being actually used or not.
+
+
+rake asset_sweeper:list_unused_javascripts -t
+
+This rake task scans for all javascripts names present in "public/javascripts/*" folder in application (html files i.e. views)
+and list down as ununsed if it doesnt get any stylesheet being included in any of views in application.
+
+But this rake task also lists all third party javascripts as unused as it doesnt get
+their names in views. Also if javascripts names are being constructed programatically
+even those javascripts will be listed as ununsed ones. So before actually deleting
+javascripts you have verify manually whether that is being actually used or not.
 
 rake asset_sweeper:find_missing_images -t
 
