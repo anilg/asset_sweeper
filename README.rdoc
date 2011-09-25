@@ -5,7 +5,7 @@ also with help of this you can list down missing images called from stylesheets 
 
 == Install
 
-  ruby script/gem install asset_sweeper
+  <b>ruby script/gem install asset_sweeper</b>
 
   It's also available in plugin form. You can install a plugin by following command.
 
