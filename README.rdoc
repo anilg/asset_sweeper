@@ -9,7 +9,7 @@ also with help of this you can list down missing images called from stylesheets 
 
   It's also available in plugin form. You can install a plugin by following command.
 
-  ruby script/plugin install git@github.com:anilg/asset_sweeper.git
+  ruby script/plugin install git://github.com/anilg/asset_sweeper.git
 
 
 == Usage
